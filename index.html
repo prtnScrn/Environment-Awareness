@@ -31,12 +31,10 @@
 <p>test</p>
 </div>
 <script>
-const button1 = documentGetElementById("button1");
+const button1 = document.getElementById("button1");
     button1.addEventListener('mouseenter', function() {
   button1.style.backgroundColor = 'lightblue'; 
 });
-
-// Add event listener for mouseleave event
 button1.addEventListener('mouseleave', function() {
   button1.style.backgroundColor = ''; 
 });
