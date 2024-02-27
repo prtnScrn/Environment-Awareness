@@ -27,21 +27,24 @@
     
 <div style="font-family: 'Libre Franklin', sans-serif;font-weight:bold; top:350px;">
 
-  <div onmouseenter="select(this, 'white'); bg(this, '#3bcc70')" onmouseleave="select(this, 'black'); bg(this, 'white')" style="position:absolute; background-size: cover; padding: 2%; left:100px;">
+  <div id='why' onmouseenter="select(this, 'white'); bg(this, '#3bcc70')" onmouseleave="select(this, 'black'); bg(this, 'white')" style="position:absolute; background-size: cover; padding: 2%; left:100px;">
     <p style="width:300px;">"Why?"<br><br>The purpose of this site is to spread awareness of environmental issues, this section talks about why<br><p style="color:lightblue">Click to see more</p></p>
   </div>
 
-  <div onmouseenter="select(this, 'white'); bg(this, '#3bcc70')" onmouseleave="select(this, 'black'); bg(this, 'white')" style="position:absolute; background-size: cover; padding: 2%; left:700px;">
+  <div id='issues' onmouseenter="select(this, 'white'); bg(this, '#3bcc70')" onmouseleave="select(this, 'black'); bg(this, 'white')" style="position:absolute; background-size: cover; padding: 2%; left:700px;">
     <p style="width:300px;">Issues<br><br>This section talks about environmental issues caused by greenhouse gasses, unsorted waste, etc<br><p style="color:lightblue">Click to see more</p></p>
   </div>
 
-  <div onmouseenter="select(this, 'white'); bg(this, '#3bcc70')" onmouseleave="select(this, 'black'); bg(this, 'white')" style="position:absolute; background-size: cover; padding: 2%; left:1300px;">
+  <div id='how' onmouseenter="select(this, 'white'); bg(this, '#3bcc70')" onmouseleave="select(this, 'black'); bg(this, 'white')" style="position:absolute; background-size: cover; padding: 2%; left:1300px;">
     <p style="width:300px;">"How?"<br><br>This section talks about methods on how we can solve the said environmental issues and how goverments can help<br><p style="color:lightblue">Click to see more</p></p>
   </div>
 
 </div>
     
 <script>
+document.getElementById('why').style.left = windows.screen.width / 2.8; 
+document.getElementById('issues').style.left = windows.screen.width / 2; 
+document.getElementById('how').style.left = windows.screen.width / 0.2; 
 function select(x, c){
     x.style.color = c;
 }
