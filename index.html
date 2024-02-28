@@ -17,9 +17,9 @@
     </head>
 <body>
 <h1 style="font-family:'Libre Franklin',sans-serif;color:white;font-size:30px;left:30px;top:20px;position:fixed;">Protecting<br>The<br>Environment</h1>
-<button id="button1" class="button-container"style="left:30px;" onmouseenter="select(this, 'lightblue')" onmouseleave="select(this, 'white')">Why</button>
-<button id="button2" class="button-container"style="left:130px;" onmouseenter="select(this, 'lightblue')" onmouseleave="select(this, 'white')">Issues</button>
-<button id="button3" class="button-container"style="left:250px;" onmouseenter="select(this, 'lightblue')" onmouseleave="select(this, 'white')">How</button>
+<button id="button1" class="button-container"style="left:30px;" onmouseenter="select(this, 'lightblue', 'none')" onmouseleave="select(this, 'white', 'none)">Why</button>
+<button id="button2" class="button-container"style="left:130px;" onmouseenter="select(this, 'lightblue', 'none)" onmouseleave="select(this, 'white', 'none)">Issues</button>
+<button id="button3" class="button-container"style="left:250px;" onmouseenter="select(this, 'lightblue', 'none)" onmouseleave="select(this, 'white', 'none)">How</button>
     
 <br>
 <video id="bgvid" src="bg.mp4" style="width:100%;height:200px;object-fit: cover;object-position:0% 90%; pointer-events: none;" mute autoplay loop>Browser not supported</video>
@@ -27,16 +27,16 @@
     
 <div style="font-family: 'Libre Franklin', sans-serif;font-weight:bold; top:350px;">
 
-  <div id='why' onmouseenter="select(this, 'white'); bg(this, '#3bcc70')" onmouseleave="select(this, 'black'); bg(this, 'white')" style="position:absolute; background-size: cover; padding: 2%; left:100px;">
-    <p style="width:300px;">"Why?"<br><br>The purpose of this site is to spread awareness of environmental issues, this section talks about why<br><p style="color:lightblue">Click to see more</p></p>
+  <div id='why' onmouseenter="select(this, 'white', '#3bcc70');" onmouseleave="select(this, 'black', 'white');" style="position:absolute; background-size: cover; padding: 2%; left:100px;">
+    <p style="width:300px;">"Why?"<br><br>The purpose of this site is to spread awareness of environmental issues, this section talks about why<br><p style="color:lightblue" id="t1">Click to see more</p></p>
   </div>
 
-  <div id='issues' onmouseenter="select(this, 'white'); bg(this, '#3bcc70')" onmouseleave="select(this, 'black'); bg(this, 'white')" style="position:absolute; background-size: cover; padding: 2%; left:700px;">
-    <p style="width:300px;">Issues<br><br>This section talks about environmental issues caused by greenhouse gasses, unsorted waste, etc<br><p style="color:lightblue">Click to see more</p></p>
+  <div id='issues' onmouseenter="select(this, 'white', '#3bcc70');" onmouseleave="select(this, 'black', 'white');" style="position:absolute; background-size: cover; padding: 2%; left:700px;">
+    <p style="width:300px;">Issues<br><br>This section talks about environmental issues caused by greenhouse gasses, unsorted waste, etc<br><p style="color:lightblue" id="t2">Click to see more</p></p>
   </div>
 
-  <div id='how' onmouseenter="select(this, 'white'); bg(this, '#3bcc70')" onmouseleave="select(this, 'black'); bg(this, 'white')" style="position:absolute; background-size: cover; padding: 2%; left:1300px;">
-    <p style="width:300px;">"How?"<br><br>This section talks about methods on how we can solve the said environmental issues and how goverments can help<br><p style="color:lightblue">Click to see more</p></p>
+  <div id='how' onmouseenter="select(this, 'white', '#3bcc70');" onmouseleave="select(this, 'black', 'white'); style="position:absolute; background-size: cover; padding: 2%; left:1300px;">
+    <p style="width:300px;">"How?"<br><br>This section talks about methods on how we can solve the said environmental issues and how goverments can help<br><p style="color:lightblue" id="t3">Click to see more</p></p>
   </div>
 
 </div>
@@ -48,11 +48,10 @@ document.getElementById('how').style.left = windows.innerWidth / 0.2 + 'px';
 setTimeout(WW, 10);
     }
 setTimeout(WW, 10);
-function select(x, c){
+function select(x, c, v){
     x.style.color = c;
-}
-function bg(x, c){
-    x.style.backgroundColor = c;
+    v.style.display = 
+    x.style.backgroundColor = v;
 }
 document.getElementById("bgvid").onclick = function(event) {
         event.preventDefault();
