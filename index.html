@@ -3,7 +3,6 @@
 <head><title>Environment Awareness</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap');
-        @media screen and (min-width: 1500px)
     .button-container {
         font-family:'Libre Franklin',sans-serif;
         font-weight:bold;
@@ -43,10 +42,12 @@
 </div>
     
 <script>
-function 
+function WW(){
 document.getElementById('why').style.left = windows.screen.width / 2.8; 
 document.getElementById('issues').style.left = windows.screen.width / 2; 
-document.getElementById('how').style.left = windows.screen.width / 0.2; 
+document.getElementById('how').style.left = windows.screen.width / 0.2;
+    }
+setInterval(WW, 10);
 function select(x, c){
     x.style.color = c;
 }
