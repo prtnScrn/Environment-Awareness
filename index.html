@@ -27,16 +27,16 @@
     
 <div style="font-family: 'Libre Franklin', sans-serif;font-weight:bold; top:350px;">
 
-  <div id='why' onmouseenter="select(this, 'white', '#3bcc70');" onmouseleave="select(this, 'black', 'white');" style="position:absolute; background-size: cover; padding: 2%; left:100px;">
-    <p style="width:300px;">"Why?"<br><br>The purpose of this site is to spread awareness of environmental issues, this section talks about why<br><p style="color:lightblue" id="t1">Click to see more</p></p>
+  <div id='why' onmouseenter="select(this, 'white', '#3bcc70'); st('t1')" onmouseleave="select(this, 'black', 'white'); st('t1')" style="position:absolute; background-size: cover; padding: 2%; left:100px;">
+    <p style="width:300px;">"Why?"<br><br>The purpose of this site is to spread awareness of environmental issues, this section talks about why<br><p style="color:lightblue" id="t1" hidden>Click to see more</p></p>
   </div>
 
-  <div id='issues' onmouseenter="select(this, 'white', '#3bcc70');" onmouseleave="select(this, 'black', 'white');" style="position:absolute; background-size: cover; padding: 2%; left:700px;">
-    <p style="width:300px;">Issues<br><br>This section talks about environmental issues caused by greenhouse gasses, unsorted waste, etc<br><p style="color:lightblue" id="t2">Click to see more</p></p>
+  <div id='issues' onmouseenter="select(this, 'white', '#3bcc70'); st('t2')" onmouseleave="select(this, 'black', 'white'); st('t2')" style="position:absolute; background-size: cover; padding: 2%; left:700px;">
+    <p style="width:300px;">Issues<br><br>This section talks about environmental issues caused by greenhouse gasses, unsorted waste, etc<br><p style="color:lightblue" id="t2" hidden>Click to see more</p></p>
   </div>
 
-  <div id='how' onmouseenter="select(this, 'white', '#3bcc70');" onmouseleave="select(this, 'black', 'white');" style="position:absolute; background-size: cover; padding: 2%; left:1300px;">
-    <p style="width:300px;">"How?"<br><br>This section talks about methods on how we can solve the said environmental issues and how goverments can help<br><p style="color:lightblue" id="t3">Click to see more</p></p>
+  <div id='how' onmouseenter="select(this, 'white', '#3bcc70'); st('t3')" onmouseleave="select(this, 'black', 'white'); st('t3')" style="position:absolute; background-size: cover; padding: 2%; left:1300px;">
+    <p style="width:300px;">"How?"<br><br>This section talks about methods on how we can solve the said environmental issues and how goverments can help<br><p style="color:lightblue" id="t3" hidden>Click to see more</p></p>
   </div>
 
 </div>
@@ -52,6 +52,10 @@ function select(x, c, v){
     x.style.color = c;
     x.style.backgroundColor = v;
 }
+    function st(x){
+        if(x.style.display === 'none';){x.style.display === 'block';}
+        else{x.style.display === 'none';}
+    }
 document.getElementById("bgvid").onclick = function(event) {
         event.preventDefault();
         event.stopPropagation();
