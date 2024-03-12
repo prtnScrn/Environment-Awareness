@@ -16,7 +16,8 @@
     </style>
     </head>
 <body>
-<h1 style="font-family:'Libre Franklin',sans-serif;color:white;font-size:30px;left:30px;top:20px;position:absolute;">Protecting<br>The<br>Environment</h1>
+<p id="inf0" style="position:fixed;top:5px;left:5px;"></p>
+<h1 style="font-family:'Libre Franklin',sans-serif;color:white;font-size:30px;left:30px;top:20px;position:fixed;">Protecting<br>The<br>Environment</h1>
 <button id="button1" class="button-container"style="left:30px;" onmouseenter="select(this, 'lightblue', '')" onmouseleave="select(this, 'white', '')">Why</button>
 <button id="button2" class="button-container"style="left:130px;" onmouseenter="select(this, 'lightblue', '')" onmouseleave="select(this, 'white', '')">Issues</button>
 <button id="button3" class="button-container"style="left:250px;" onmouseenter="select(this, 'lightblue', '')" onmouseleave="select(this, 'white', '')">How</button>
@@ -51,11 +52,14 @@
   </div>
 </div>
 <script>
+var scroll = $(window).scrollTop();
 function WW(){
 document.getElementById('why').style.left = window.innerWidth * 0.01 + 'px'; 
 document.getElementById('issues').style.left = window.innerWidth * 0.36 + 'px'; 
 document.getElementById('how').style.left = window.innerWidth * 0.71 + 'px';
 document.getElementById('article').style.left = window.innerWidth * 0.05 + 'px';
+scroll = $(window).scrollTop();
+document.getElemenyById('inf0').innerHTML = scroll;
 setTimeout(WW, 10);
     }
 setTimeout(WW, 10);
